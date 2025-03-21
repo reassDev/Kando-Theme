@@ -1,8 +1,5 @@
-# Bent Photon (Grotesque Green)
-<img src="https://github.com/user-attachments/assets/8d233a63-1f2b-4920-a111-0965b3685ace" width="400"></img>
+# Bent Photon Modified (Red Color Scheme)
+<img src="https://raw.githubusercontent.com/reassDev/Kando-Theme/refs/heads/main/theme_showcase1.png" width="400"></img>
+<img src="https://raw.githubusercontent.com/reassDev/Kando-Theme/refs/heads/main/theme_showcase2.png" width="400"></img>
 
-# Bent Photon (Apricot and Plum)
-<img src="https://github.com/user-attachments/assets/a926b839-534b-46e7-b49a-2bcc8e19cc6f" width="400"></img>
-
-
-Donload Zip files in releases →
+Download Zip files in releases →

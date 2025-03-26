@@ -5,10 +5,6 @@
 //                                                                                      //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-// SPDX-FileCopyrightText: reass <https://github.com/reassDev>
-// SPDX-FileCopyrightText: Neigh <github.com/NeighNeighNeigh>
-// SPDX-License-Identifier: CC-BY-4.0 */
-
 {
   name: "Aurora Flow",
   author: "reass",

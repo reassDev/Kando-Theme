@@ -1,0 +1,92 @@
+/*////////////////////////////////////////////////////////////////////////////////////////
+//   _  _ ____ _  _ ___  ____                                                           //
+//   |_/  |__| |\ | |  \ |  |    This file belongs to Kando, the cross-platform         //
+//   | \_ |  | | \| |__/ |__|    pie menu. Read more on github.com/kando-menu/kando     //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* SPDX-FileCopyrightText: reass <https://github.com/reassDev> */
+/* SPDX-FileCopyrightText: Neigh <github.com/NeighNeighNeigh> */
+/* SPDX-License-Identifier: CC-BY-4.0 */
+
+@font-face {
+  font-family: 'SpaceGrotesk-Bold';
+  src: url('SpaceGrotesk-Bold.otf') format('opentype');
+}
+
+.center-text {
+  display: none !important;
+}
+
+#kando-menu {
+  --dots-spacing: 3px;
+  --dots-size: 1px;
+  background-color: var(--canvas-color);
+  background-image: radial-gradient(var(--dots-color) var(--dots-size), transparent 0);
+  background-size: var(--dots-spacing) var(--dots-spacing);
+  background-position: calc(var(--dots-spacing) - var(--dots-size)) calc(var(--dots-spacing) - var(--dots-size));
+}
+
+.menu-node {
+  --child-distance: 90px;
+  --grandchild-distance: 60px;
+  --center-size: 140px;
+  --icon-size: 32px;
+  --menu-transition: transform 150ms ease-out, opacity 200ms ease-out;
+
+  transform-origin: center;
+  transition: var(--menu-transition);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  &.child {
+    transform: translate(calc(var(--child-distance) * var(--dir-x)), calc(var(--child-distance) * var(--dir-y)));
+    opacity: 0;
+  }
+
+  &.active:has(.hovered) > .child {
+    transform: scale(1.1) translate(calc(var(--child-distance) * var(--dir-x)), calc(var(--child-distance) * var(--dir-y)));
+    opacity: 1;
+  }
+
+  .icon-layer {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    z-index: 1;
+    transition: var(--menu-transition);
+    color: var(--icon-color);
+    
+    background: linear-gradient(120deg, var(--unhovered-gradient-color-1), var(--unhovered-gradient-color-2), var(--unhovered-gradient-color-3));
+  }
+
+  &.hovered > .icon-layer {
+    background: linear-gradient(120deg, var(--hovered-gradient-color-1), var(--hovered-gradient-color-2));
+    filter: drop-shadow(0 0 12px var(--hovered-drop-shadow-color));
+  }
+
+  &.grandchild {
+    transform: translate(calc(var(--grandchild-distance) * var(--dir-x)), calc(var(--grandchild-distance) * var(--dir-y)));
+    opacity: 0;
+  }
+
+  &.active > .child {
+    opacity: 1;
+  }
+
+  &.child, &.grandchild {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//   _  _ ____ _  _ ___  ____                                                           //
+//   |_/  |__| |\ | |  \ |  |    This file belongs to Kando, the cross-platform         //
+//   | \_ |  | | \| |__/ |__|    pie menu. Read more on github.com/kando-menu/kando     //
+//                                                                                      //
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// SPDX-FileCopyrightText: reass <https://github.com/reassDev>
+// SPDX-FileCopyrightText: Neigh <github.com/NeighNeighNeigh>
+// SPDX-License-Identifier: CC-BY-4.0 */
+
+{
+  name: "Aurora Flow",
+  author: "reass",
+  license: "CC0-1.0",
+  themeVersion: "1.0",
+
+  // This theme was created for Kando's theme engine version 1. Kando will use this to
+  // check if the theme is compatible with the current version of Kando.
+  engineVersion: 1,
+
+  // When a menu is opened too close to a screen's edge, it is moved away from the edge
+  // by this amount of pixels.
+  maxMenuRadius: 180,
+
+  // This theme draws child items below their parent items.
+  drawChildrenBelow: true,
+
+  // These colors can be configured by the user and are vailable in the CSS file as CSS
+  // variables. The default values are used if the user does not provide any values.
+  colors: {
+    'unhovered-gradient-color-1': 'oklch(77.62% 0.149277 226.5945 / 90%)',
+    'unhovered-gradient-color-2': 'oklch(88.46% 0.191159 163.0066 / 90%)',
+    'unhovered-gradient-color-3': 'oklch(57.9% 0.24387 286.5375 / 90%)',
+    'hovered-gradient-color-1': 'oklch(67.96% 0.2101 18.42)',
+    'hovered-gradient-color-2': 'oklch(76.03% 0.1539 304.96)',
+    'hovered-drop-shadow-color': 'oklch(84.59% 0.0904 1.7 / 80%)',
+    'icon-color': 'oklch(30.97% 0.0099 1.7)',
+    'canvas-color': 'oklch(15% 0.3 280 / 85%)',
+    'dots-color': 'oklch(100% 0% 0deg / 0%)',
+  },
+
+
+  layers: [
+    { class: "icon-layer", content: "icon" },
+  ],
+}
